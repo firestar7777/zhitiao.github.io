@@ -1,0 +1,124 @@
+/*basic reset*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	/*better text styling*/
+	font: bold 14px Arial, sans-serif;
+}
+
+/*a nice BG gradient*/
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle,#fff 20%,#ccc);
+	background-size: cover;
+}
+
+/*use box shadows to create 3D effects*/
+#calculator{
+	width: 325px;
+	height: auto;
+
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea,#8bceec);
+	border-radius: 3px;
+	box-shadow: 0px 4px #009dea, 0px 10px 15px rgba(0,0,0,0.2);
+}
+
+/*top portion*/
+.top span.clear{
+	float: left;
+}
+
+/*insert shadow to the screen*/
+.top .screen{
+	height: 40px;
+	width: 212px;
+
+	float: left;
+	padding: 0 10px;
+
+	background: rgba(0,0,0,0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0,0,0,0.2);
+
+	/*typography*/
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+/*clear floats*/
+.keys,.top{
+	overflow: hidden;
+}
+
+/*applying same to the keys*/
+.keys span, .top span.clear{
+	float: left;
+	position: relative;
+	top: 0;
+
+	cursor: pointer;
+
+	width: 66px;
+	height: 36px;
+
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0px 4px rgba(0,0,0,0.2);
+
+	margin: 0px 7px 11px 0;
+
+	color: #888;
+	line-height: 36px;
+	text-align: center;
+
+	user-select: none;
+
+	transition: all 0.2s ease;
+}
+
+.keys span.operator{
+	background: #FFF0F5;
+	margin-right: 0px;
+}
+
+.keys span.equal{
+	background: #f1ff92;
+	box-shadow: 0px 4px #9da853;
+	color: #888e5f;
+}
+
+.top span.clear{
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+}
+
+/*some hover effects*/
+
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+.keys span:active {
+	box-shadow: 0px 0px;
+	top: 4px;
+}
+
+.keys span.eval:active {
+	box-shadow: 0px 0px;
+	top: 4px;
+}
+
+.top span.clear:active {
+	top: 4px;
+	box-shadow: 0px 0px;
+}
